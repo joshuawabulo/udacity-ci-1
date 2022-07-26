@@ -5,6 +5,9 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SO:ME:FIN:G:ER:PR:IN:T"
       - checkout
       - run: npm i
       - save_cache:
